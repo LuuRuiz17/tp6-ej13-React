@@ -1,0 +1,44 @@
+#root {
+  background: rgb(154, 216, 255);
+}
+
+html {
+  background: rgb(154, 216, 255);
+}
+
+@keyframes cambiarTitulo {
+  0% {
+    color: rgb(9, 9, 166);
+  }
+  25% {
+    color: rgb(12, 12, 200);
+  }
+  50% {
+    color: rgb(15, 15, 218);
+  }
+  75% {
+    color: rgb(29, 29, 255);
+  }
+  100% {
+    color: rgb(54, 54, 255);
+  }
+}
+
+.color-loop {
+  animation: cambiarTitulo 1s infinite alternate;
+}
+
+.card-clima {
+  max-width: 500px;
+  background-color: rgba(2, 121, 196, 0.812)!important;
+  /* background-image: url("./assets/clima2.webp"); */
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative; */
+}
+
+.imagen-clima {
+  max-width: 80px;
+}

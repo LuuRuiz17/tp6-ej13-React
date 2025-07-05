@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Form } from "react-bootstrap";
+import { Form , Button} from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import ClimaCiudad from "./ClimaCiudad";
 
@@ -25,7 +25,7 @@ const Select = ({ ciudades }) => {
     return (
 
         <>
-            <Form onSubmit={handleSubmit(obtenerClima)}>
+            <Form onSubmit={handleSubmit(obtenerClima)} className="d-flex">
                 <Form.Select aria-label="Selecciona una ciudad" {...register('ciudad')}>
                     <option>Selecciona una ciudad</option>
                     {
@@ -34,7 +34,7 @@ const Select = ({ ciudades }) => {
                         ))
                     }
                 </Form.Select >
-                <button type="submit">Enviar</button>
+                <Button type="submit"className="ms-2">Enviar</Button>
             </Form>
             <ClimaCiudad clima = {clima}></ClimaCiudad>
         </>

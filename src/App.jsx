@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import Select from "../components/Select";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from "react-bootstrap";
 
 function App() {
 
   useEffect(() => {
-    console.log("Desde useEffect")
     obtenerCiudades();
   }, [])
 
@@ -23,10 +24,10 @@ function App() {
   }
 
   return (
-    <>
-      <h1>Clima</h1>
+    <Container>
+      <h1 className="color-loop text-center mx-auto my-3">Clima</h1>
       <Select ciudades={ciudades}></Select>
-    </>
+    </Container>
   )
 }
 
