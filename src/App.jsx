@@ -12,7 +12,7 @@ function App() {
   } = useForm()
 
   useEffect(() => {
-    console.log("Desde useEffect") 
+    console.log("Desde useEffect")
     obtenerCiudades();
   }, [])
 
@@ -24,7 +24,6 @@ function App() {
       if (respuesta.status === 200) {
         const ciudades = await respuesta.json();
         setCiudades(ciudades.data[7].cities);
-        console.log(ciudades.data[7].cities);
       }
     } catch (error) {
       console.log("Error al obtener ciudades: ", error);
@@ -34,10 +33,7 @@ function App() {
   return (
     <>
       <h1>Clima</h1>
-      <Form onSubmit={handleSubmit()}>
-        <Select ciudades={ciudades}></Select>
-        <button type="submit">Enviar</button>
-      </Form>
+      <Select ciudades={ciudades}></Select>
     </>
   )
 }
