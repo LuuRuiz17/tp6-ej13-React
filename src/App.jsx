@@ -1,15 +1,7 @@
 import { useEffect, useState } from "react";
-import { Form } from "react-bootstrap";
-import { useForm } from "react-hook-form";
 import Select from "../components/Select";
 
 function App() {
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm()
 
   useEffect(() => {
     console.log("Desde useEffect")
